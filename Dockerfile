@@ -8,11 +8,9 @@ RUN npm install
 
 COPY . . 
 
-ENV DATABASE_URL=postgresql://postgres:testpass123@localhost:6500/mydb?schema=public
-RUN echo ${DATABASE_URL}
-RUN DATABASE_URL=$DATABASE_URL npx prisma migrate dev
+ENV DATABASE_URL=postgresql://postgres:testpass123@localhost:5432/mydb?schema=public
 RUN npx prisma generate
 RUN npm run build
 
-CMD ["npm", "start"]
+CMD ["npm","run","dev:docker"]
 
