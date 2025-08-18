@@ -3,7 +3,7 @@
  - Clone the repo
  - Install dependencies ( npm install / yarn install / pnpm install ) 
  - Start the DB locally 
-    - docker run -d -e POSTGRES_DB=mydb -e POSTGRES_PASSWORD=testpass123 -e POSTGRES_USER=postgres -p "6500:5432" postgres
+    - `docker run -d -e POSTGRES_DB=mydb -e POSTGRES_PASSWORD=testpass123 -e POSTGRES_USER=postgres -p "6500:5432" postgres`
     - Go to neon.tech and get yourself a new DB
  - Change the .env file and update your DB credentails
  - npx prisma migrate
